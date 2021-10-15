@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/grama.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "movimento"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.208584 ), Vector2( 0.2, 0.305215 ), Vector2( 0.2, 0.208584 ) ]
+}
+
+[node name="flores" type="Node2D"]
+position = Vector2( 20.2043, 85.3071 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 305.237, 779.959 )
+scale = Vector2( 0.2, 0.208584 )
+texture = ExtResource( 1 )
+offset = Vector2( -6.18542, -708.645 )
+
+[node name="anim_flores" type="AnimationPlayer" parent="."]
+autoplay = "movimento"
+anims/movimento = SubResource( 1 )
