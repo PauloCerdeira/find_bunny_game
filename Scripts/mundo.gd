@@ -2,11 +2,14 @@ extends Node2D
 
 var pre_coelho = preload("res://Scenes/coelho.tscn")
 var tempo = 0
+onready var pontos = $Label
+export var score = 0
 
 func _ready():
 	pass
 
 func _process(delta):
+	pontos.text = "Pontos: " + str(score)
 	tempo += delta
 	if tempo > rand_range(1, 2.5):
 		criarCoelho()

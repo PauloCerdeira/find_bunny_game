@@ -22,6 +22,7 @@ texture = ExtResource( 1 )
 
 [node name="audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+volume_db = -18.452
 
 [node name="Label" type="Label" parent="."]
 margin_right = 599.0

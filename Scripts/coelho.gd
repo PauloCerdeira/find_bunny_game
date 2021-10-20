@@ -20,8 +20,9 @@ func _process(_delta):
 		self.position.y += vel * 0.5
 
 func _on_Button_button_down():
+	get_parent().score += 10
+	#$"../".score += 10
 	$"../audio".play()
-	#same as:
 	#get_parent().audio.play()
 	criarCacos()
 	self.queue_free()
